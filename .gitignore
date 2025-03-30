@@ -1,8 +1,12 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -16,10 +20,70 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
 .env
 .venv
 env/
@@ -28,8 +92,37 @@ ENV/
 env.bak/
 venv.bak/
 
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm and other IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
 # 项目特定文件
-*.log
 checked_domains.csv
 available_domains.csv
 errors.csv
@@ -44,13 +137,10 @@ a_prefix_scan.log
 full_scan.log
 results/*.csv
 logs/*.log
+full_scan_progress.csv
 
 # 系统文件
 .DS_Store
-.idea/
-.vscode/
-*.swp
-*.swo
 
 # 临时文件
 temp/
@@ -61,14 +151,3 @@ tmp/
 *.sqlite
 *.sqlite3
 *.db
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# 虚拟环境
-.venv/
-venv/
-ENV/ 
