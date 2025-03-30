@@ -178,11 +178,11 @@ screen -r domain-check
 ```bash
 @echo off
 start /min cmd /c python domain_finder.py --letters --length 4 --limit 456976 --verify-api --threads 30 > finder.log 2>&1
+```
 
 start /min：最小化窗口
 
 > finder.log 2>&1：将所有输出重定向到日志文件
-```
 
 ✅ 日志建议配置（Python 内部）
 确保你在 domain_finder.py 中有如下记录机制：
