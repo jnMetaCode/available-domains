@@ -127,6 +127,80 @@ nohup python3 run_full_scan.py --verify-api --threads 50 > logs/full_scan.log 2>
 python3 run_full_scan.py --prefix "a" --limit 10000 --verify-api
 ```
 
+其他：你希望：
+
+✅ 让它在后台运行，不依赖命令窗口；
+
+✅ 通过日志手动查看进度（例如实时写入 log.txt）；
+
+✅ 即使关闭终端或断网也能继续执行（可选）；
+
+✅ 方法一：使用 nohup + &（最推荐）
+适用于 macOS / Linux / VPS 等：
+
+
+```bash
+nohup python3 domain_finder.py --letters --length 4 --limit 456976 --verify-api --threads 30 > finder.log 2>&1 &
+```
+含义	说明
+nohup	保证即使你退出终端，程序继续运行
+>	将标准输出重定向到 finder.log
+2>&1	将错误输出也重定向到同一个文件
+&	表示在后台运行
+
+✅ 查看日志（实时）
+```bash
+tail -f finder.log
+```
+实时查看最新日志，Ctrl+C 退出查看（不会中断程序）
+
+✅ 方法二：使用 screen 或 tmux 会话管理器（可选）
+
+```bash
+screen -S domain-check
+# 进入 screen 后执行：
+python3 domain_finder.py --letters --length 4 --limit 456976 --verify-api --threads 30
+```
+然后按下：
+
+Ctrl+A 然后 D → 退出 screen，不中断任务
+
+之后可恢复：
+
+```bash
+screen -r domain-check
+```
+
+✅ 方法三（Windows 专用）：使用 PowerShell 隐藏窗口（非 GUI）
+若你在 Windows 环境：
+
+可保存为 run_hidden.bat：
+```bash
+@echo off
+start /min cmd /c python domain_finder.py --letters --length 4 --limit 456976 --verify-api --threads 30 > finder.log 2>&1
+
+start /min：最小化窗口
+
+> finder.log 2>&1：将所有输出重定向到日志文件
+```
+
+✅ 日志建议配置（Python 内部）
+确保你在 domain_finder.py 中有如下记录机制：
+
+```bash
+import logging
+
+logging.basicConfig(
+    filename='finder.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+logging.info("开始执行任务")
+```
+
+
+
 ### 故障排除
 
 #### Apple Silicon兼容性问题
