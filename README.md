@@ -54,6 +54,7 @@ cp config.json.example config.json
 
 ```bash
 ./run_app.sh
+如：选择4,自定义
 ```
 
 该脚本会自动选择最适合您系统的界面版本。
@@ -64,6 +65,21 @@ cp config.json.example config.json
 ./run_app.sh --lang=zh  # 中文界面
 ./run_app.sh --lang=en  # 英文界面
 ```
+3. 操作
+
+选择操作：
+1. 基本域名检查 (--letters --length 4 --limit 100)
+2. 带API验证的域名检查 (--verify-api)
+3. 高性能检查 (--threads 50)
+4. 自定义命令
+5. 查看已发现可用域名
+6. 退出
+请输入选项 [1-6]: 4
+
+请输入命令参数:--letters --length 4 --limit 456976 --verify-api --threads 30
+
+###说明：扫描字母，4位数，全部，使用初步筛查：dns，使用精准核实：api ，dns线程：30
+
 
 ### 界面选项
 
