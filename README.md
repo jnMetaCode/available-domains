@@ -279,5 +279,5 @@ Alan
 
 ## 版本信息 / Version Information
 
-版本 / Version: 1.0.0
-更新日期 / Last Updated: 2024-06-15
+版本 / Version: 1.1.0
+更新日期 / Last Updated: 2025-03-30
