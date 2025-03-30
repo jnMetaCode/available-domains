@@ -1,0 +1,16 @@
+# 核心依赖
+requests>=2.27.1
+dnspython>=2.2.0
+urllib3>=1.26.6,<2.0.0
+tqdm>=4.64.0
+
+# GUI依赖 - 尽量使用系统自带tkinter，无需单独安装
+# 如果需要自定义主题，可以取消下面的注释
+# ttkthemes>=3.2.0
+
+# 可选依赖 - 用于高级功能
+# xmltodict>=0.13.0  # 用于解析XML API响应
+# beautifulsoup4>=4.11.0  # 用于解析HTML内容
+
+# 打包工具（可选）
+# pyinstaller>=5.6.2  # 用于创建可执行文件 

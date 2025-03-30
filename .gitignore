@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 项目特定文件
+*.log
+checked_domains.csv
+available_domains.csv
+errors.csv
+domain_finder.log
+config.json
+config_local.json
+backup_*/
+*.pkl
+batch_progress.csv
+batch_log.txt
+a_prefix_scan.log
+full_scan.log
+results/*.csv
+logs/*.log
+
+# 系统文件
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 临时文件
+temp/
+tmp/
+
+# 数据库
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 虚拟环境
+.venv/
+venv/
+ENV/ 

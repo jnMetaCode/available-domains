@@ -1,0 +1,21 @@
+# 设置默认行为，如果core.autocrlf没有被设置
+* text=auto
+
+# 声明文本文件的文本规范化
+*.py text
+*.md text
+*.json text
+*.txt text
+*.sh text eol=lf
+*.csv text
+*.yml text
+*.yaml text
+
+# 声明二进制文件，不做任何规范化处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.gz binary 

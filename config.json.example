@@ -1,0 +1,49 @@
+{
+    "dns_workers": 20,
+    "api_workers": 2,
+    "domain_prefix": "",
+    "domain_suffix": "",
+    "tld": ".com",
+    "letters": "abcdefghijklmnopqrstuvwxyz",
+    "numbers": "0123456789",
+    "symbols": "-",
+    "length": 4,
+    "min_length": 3,
+    "max_length": 5,
+    "log_level": "INFO",
+    "log_file": "domain_finder.log",
+    "checked_domains_file": "checked_domains.csv",
+    "available_domains_file": "available_domains.csv",
+    "errors_file": "errors.csv",
+    "providers": {
+        "porkbun": {
+            "active": false,
+            "api_key": "YOUR_API_KEY_HERE",
+            "secret_key": "YOUR_SECRET_KEY_HERE",
+            "check_endpoint": "https://porkbun.com/api/json/v3/domain/check"
+        },
+        "dynadot": {
+            "active": false,
+            "api_key": "YOUR_API_KEY_HERE",
+            "check_endpoint": "https://api.dynadot.com/api3.xml"
+        }
+    },
+    "m2_optimizations": {
+        "enabled": true,
+        "ssl_workaround": true,
+        "dns_timeout": 5,
+        "http_timeout": 10,
+        "throttle_rate": 100,
+        "max_retries": 3,
+        "retry_delay": 1
+    },
+    "gui": {
+        "theme": "system",
+        "simplified": true,
+        "window_width": 900,
+        "window_height": 600,
+        "font_size": 11,
+        "auto_save": true,
+        "auto_save_interval": 60
+    }
+} 
